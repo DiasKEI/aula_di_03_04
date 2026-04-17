@@ -1,49 +1,66 @@
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
+    padding: 20px;
+    border: 20px;
+    border-color: rgb(247, 35, 35);
+    justify-content: center;
     /*cor em hexadecimal*/
 }
 
 header {
-    background-color: #c0c0c0;
-    color: #ffff;
+    color: #9c2f2f;
     /*branco em hexadecimal*/
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-nav a {
-    color: blue;
-    text-decoration: none;
-    padding: 4px;
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 250px;
+    justify-content: center;
 }
-
-.bloco {
-    background-color: #cccc;
+nav a{
     color: black;
-    border: 1px dotted #a3a3;
+    text-decoration: none;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-style: double;
+    background-color: #cccc;
+    border-bottom-color: rgb(102, 10, 10);
+}
+nav a:hover{color: red}
+.bloco {
+    background-color: rgb(255, 111, 111);
+    color: black;
+    justify-content: center;
+    border: 10px dotted rgba(143, 7, 7, 0.932);
     border-radius: 6px;
-    padding: 16px;
+    padding: 15px;
     margin-bottom: 16px;
-    border-top: 2px solid #d8d;
+    border-top: 2px solid rgb(252, 1, 22);
 }
 
 #galeria {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
-    justify-content: flex-start;
-    padding: 20px;
+    gap: 250px;
+    justify-content: center;
+    padding: 50px;
 }
 .Foto{
     background: white;
     padding: 12px 12px 20px 12px;
     border: 1px solid #dddddd;
-    box-shadow: 0 4px 10px #000000;
+    box-shadow: 0 4px 10px #680202;
     width: 220px;
     text-align: center;
     border-radius: 4px; 
@@ -53,4 +70,13 @@ nav a {
     height: 220px;
     object-fit: cover; 
     display: block;
+}
+.Foto:hover{
+    transform: scale(1.50) rotate(2deg);
+}
+.legenda{
+    margin-top: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+    font-style: italic;
 }
